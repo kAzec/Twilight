@@ -1,0 +1,4 @@
+module CSunriset [system] {
+  header "sunriset/sunriset.h"
+  export *
+}
