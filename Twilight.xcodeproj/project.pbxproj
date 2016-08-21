@@ -14,14 +14,14 @@
 		4CD55D4C1D3166770031C955 /* sunriset.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CD55D4A1D3166770031C955 /* sunriset.c */; };
 		4CD55D4D1D3166770031C955 /* sunriset.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CD55D4A1D3166770031C955 /* sunriset.c */; };
 		4CD55D4E1D3166770031C955 /* sunriset.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CD55D4A1D3166770031C955 /* sunriset.c */; };
-		4CD55D4F1D3166770031C955 /* sunriset.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CD55D4A1D3166770031C955 /* sunriset.c */; };
-		4CD55D501D3166770031C955 /* sunriset.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD55D4B1D3166770031C955 /* sunriset.h */; };
-		4CD55D511D3166770031C955 /* sunriset.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD55D4B1D3166770031C955 /* sunriset.h */; };
-		4CD55D521D3166770031C955 /* sunriset.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD55D4B1D3166770031C955 /* sunriset.h */; };
-		4CD55D531D3166770031C955 /* sunriset.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD55D4B1D3166770031C955 /* sunriset.h */; };
 		4CD55D5B1D3182240031C955 /* TwilightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD55D5A1D3182240031C955 /* TwilightTests.swift */; };
 		4CD55D5D1D3182240031C955 /* Twilight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD55D201D3155FA0031C955 /* Twilight.framework */; };
 		4CD55D641D3192010031C955 /* Twilight+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD55D631D3192010031C955 /* Twilight+Description.swift */; };
+		4CE6D9A61D692D5F003FC5E1 /* Twilight.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE6D9A41D692D5F003FC5E1 /* Twilight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE6D9A71D692D5F003FC5E1 /* Twilight.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE6D9A41D692D5F003FC5E1 /* Twilight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE6D9A81D692D5F003FC5E1 /* Twilight.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE6D9A41D692D5F003FC5E1 /* Twilight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE6D9A91D692DDB003FC5E1 /* Twilight.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE6D9A41D692D5F003FC5E1 /* Twilight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE6D9AB1D692F0B003FC5E1 /* sunriset.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CD55D4A1D3166770031C955 /* sunriset.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +41,14 @@
 		4CD55D131D3155EE0031C955 /* Twilight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Twilight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD55D201D3155FA0031C955 /* Twilight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Twilight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD55D291D3158750031C955 /* Twilight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twilight.swift; sourceTree = "<group>"; };
-		4CD55D491D3165DD0031C955 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
+		4CD55D491D3165DD0031C955 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		4CD55D4A1D3166770031C955 /* sunriset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sunriset.c; sourceTree = "<group>"; };
 		4CD55D4B1D3166770031C955 /* sunriset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sunriset.h; sourceTree = "<group>"; };
 		4CD55D581D3182240031C955 /* Twilight Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Twilight Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD55D5A1D3182240031C955 /* TwilightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilightTests.swift; sourceTree = "<group>"; };
 		4CD55D5C1D3182240031C955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD55D631D3192010031C955 /* Twilight+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Twilight+Description.swift"; sourceTree = "<group>"; };
+		4CE6D9A41D692D5F003FC5E1 /* Twilight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Twilight.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD55D291D3158750031C955 /* Twilight.swift */,
-				4CD55D491D3165DD0031C955 /* module.map */,
-				4CD55D471D3162E40031C955 /* sunriset */,
+				4CD55D471D3162E40031C955 /* CSunriset */,
 				4CD55D281D3156010031C955 /* Supporting Files */,
 			);
 			path = Sources;
@@ -126,27 +126,37 @@
 			isa = PBXGroup;
 			children = (
 				4CD55CFB1D3155AE0031C955 /* Info.plist */,
+				4CE6D9A41D692D5F003FC5E1 /* Twilight.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4CD55D471D3162E40031C955 /* sunriset */ = {
+		4CD55D471D3162E40031C955 /* CSunriset */ = {
 			isa = PBXGroup;
 			children = (
-				4CD55D4A1D3166770031C955 /* sunriset.c */,
-				4CD55D4B1D3166770031C955 /* sunriset.h */,
+				4CE6D9A31D692D41003FC5E1 /* C */,
+				4CD55D491D3165DD0031C955 /* module.modulemap */,
 			);
-			path = sunriset;
+			path = CSunriset;
 			sourceTree = "<group>";
 		};
 		4CD55D591D3182240031C955 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				4CD55D5C1D3182240031C955 /* Info.plist */,
-				4CD55D5A1D3182240031C955 /* TwilightTests.swift */,
 				4CD55D631D3192010031C955 /* Twilight+Description.swift */,
+				4CD55D5A1D3182240031C955 /* TwilightTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		4CE6D9A31D692D41003FC5E1 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				4CD55D4A1D3166770031C955 /* sunriset.c */,
+				4CD55D4B1D3166770031C955 /* sunriset.h */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +166,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD55D501D3166770031C955 /* sunriset.h in Headers */,
+				4CE6D9A91D692DDB003FC5E1 /* Twilight.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +174,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD55D511D3166770031C955 /* sunriset.h in Headers */,
+				4CE6D9A61D692D5F003FC5E1 /* Twilight.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +182,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD55D521D3166770031C955 /* sunriset.h in Headers */,
+				4CE6D9A71D692D5F003FC5E1 /* Twilight.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +190,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD55D531D3166770031C955 /* sunriset.h in Headers */,
+				4CE6D9A81D692D5F003FC5E1 /* Twilight.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD55D4F1D3166770031C955 /* sunriset.c in Sources */,
+				4CE6D9AB1D692F0B003FC5E1 /* sunriset.c in Sources */,
 				4CD55D2D1D3158750031C955 /* Twilight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,7 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uncosmos.Twilight;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -548,7 +558,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uncosmos.Twilight;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
@@ -569,7 +579,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
@@ -593,7 +603,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
@@ -615,7 +625,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
@@ -638,7 +648,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
@@ -664,7 +674,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -689,7 +699,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Sources/CSunriset";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;

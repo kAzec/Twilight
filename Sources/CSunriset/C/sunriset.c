@@ -2,18 +2,18 @@
 /* Updated comments, 05-Aug-2013 */
 
 /*
- 
+
  SUNRISET.C - computes Sun rise/set times, start/end of twilight, and
  the length of the day at any date and latitude
- 
+
  Written as DAYLEN.C, 1989-08-16
- 
+
  Modified to SUNRISET.C, 1992-12-01
- 
+
  (c) Paul Schlyter, 1989, 1992
- 
+
  Released to the public domain by Paul Schlyter, December 1992
- 
+
  */
 
 
@@ -102,28 +102,28 @@ int sunriset( int year, int month, int day, double lon, double lat,
     t,          /* Diurnal arc */
     tsouth,     /* Time when Sun is at south */
     sidtime;    /* Local sidereal time */
-    
+
     int rc = 0; /* Return cde from function - usually 0 */
-    
+
     /* Compute d of 12h local mean solar time */
     d = days_since_2000_Jan_0(year,month,day) + 0.5 - lon/360.0;
-    
+
     /* Compute the local sidereal time of this moment */
     sidtime = revolution( GMST0(d) + 180.0 + lon );
-    
+
     /* Compute Sun's RA, Decl and distance at this moment */
     sun_RA_dec( d, &sRA, &sdec, &sr );
-    
+
     /* Compute time when Sun is at south - in hours UT */
     tsouth = 12.0 - rev180(sidtime - sRA)/15.0;
-    
+
     /* Compute the Sun's apparent radius in degrees */
     sradius = 0.2666 / sr;
-    
+
     /* Do correction to upper limb, if necessary */
     if ( upper_limb )
         altit -= sradius;
-    
+
     /* Compute the diurnal arc that the Sun traverses to reach */
     /* the specified altitude altit: */
     {
@@ -137,11 +137,11 @@ int sunriset( int year, int month, int day, double lon, double lat,
         else
             t = acosd(cost)/15.0;   /* The diurnal arc, hours */
     }
-    
+
     /* Store rise and set times - in hours UT */
     *trise = tsouth - t;
     *tset  = tsouth + t;
-    
+
     return rc;
 }  /* __sunriset__ */
 
@@ -175,27 +175,27 @@ double daylen( int year, int month, int day, double lon, double lat,
     cos_sdecl,  /* Cosine of Sun's declination */
     sradius,    /* Sun's apparent radius */
     t;          /* Diurnal arc */
-    
+
     /* Compute d of 12h local mean solar time */
     d = days_since_2000_Jan_0(year,month,day) + 0.5 - lon/360.0;
-    
+
     /* Compute obliquity of ecliptic (inclination of Earth's axis) */
     obl_ecl = 23.4393 - 3.563E-7 * d;
-    
+
     /* Compute Sun's ecliptic longitude and distance */
     sunpos( d, &slon, &sr );
-    
+
     /* Compute sine and cosine of Sun's declination */
     sin_sdecl = sind(obl_ecl) * sind(slon);
     cos_sdecl = sqrt( 1.0 - sin_sdecl * sin_sdecl );
-    
+
     /* Compute the Sun's apparent radius, degrees */
     sradius = 0.2666 / sr;
-    
+
     /* Do correction to upper limb, if necessary */
     if ( upper_limb )
         altit -= sradius;
-    
+
     /* Compute the diurnal arc that the Sun traverses to reach */
     /* the specified altitude altit: */
     {
@@ -229,12 +229,12 @@ void sunpos( double d, double *lon, double *r )
     E,         /* Eccentric anomaly */
     x, y,      /* x, y coordinates in orbit */
     v;         /* True anomaly */
-    
+
     /* Compute mean elements */
     M = revolution( 356.0470 + 0.9856002585 * d );
     w = 282.9404 + 4.70935E-5 * d;
     e = 0.016709 - 1.151E-9 * d;
-    
+
     /* Compute true longitude and radius vector */
     E = M + e * RADEG * sind(M) * ( 1.0 + e * cosd(M) );
     x = cosd(E) - e;
@@ -254,25 +254,25 @@ void sun_RA_dec( double d, double *RA, double *dec, double *r )
 /******************************************************/
 {
     double lon, obl_ecl, x, y, z;
-    
+
     /* Compute Sun's ecliptical coordinates */
     sunpos( d, &lon, r );
-    
+
     /* Compute ecliptic rectangular coordinates (z=0) */
     x = *r * cosd(lon);
     y = *r * sind(lon);
-    
+
     /* Compute obliquity of ecliptic (inclination of Earth's axis) */
     obl_ecl = 23.4393 - 3.563E-7 * d;
-    
+
     /* Convert to equatorial rectangular coordinates - x is unchanged */
     z = y * sind(obl_ecl);
     y = y * cosd(obl_ecl);
-    
+
     /* Convert to spherical coordinates */
     *RA = atan2d( y, x );
     *dec = atan2d( z, sqrt(x*x + y*y) );
-    
+
 }  /* sun_RA_dec */
 
 
