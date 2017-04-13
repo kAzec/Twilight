@@ -9,17 +9,17 @@
 import Foundation
 @testable import Twilight
 
-extension NSDate {
-    func description(in timezone: NSTimeZone) -> String {
-        let dateFormatter = NSDateFormatter()
+extension Date {
+    func description(in timezone: TimeZone) -> String {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.timeZone = timezone
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
 }
 
 extension Twilight {
-    func description(in timezone: NSTimeZone) -> String {
+    func description(in timezone: TimeZone) -> String {
         return String(format:
             ["Date: %@\n",
                 "Sunrise: %@\n",
@@ -33,16 +33,16 @@ extension Twilight {
                 "Daytime Length: %@\n",
                 "Nautical Twilight Length: %@\n",
                 "Civil Twilight Length: %@\n",
-                "Astronomical Twilight Length: %@\n"].joinWithSeparator(""),
-                      "\(dateComponents.year) \(dateComponents.month) \(dateComponents.day)",
+                "Astronomical Twilight Length: %@\n"].joined(separator: ""),
+                      "\(dateComponents.year!) \(dateComponents.month!) \(dateComponents.day!)",
                       self.sunrise().description(in: timezone), self.sunset().description(in: timezone),
-                      self.twilight(.civil).start.description(in: timezone), self.twilight(.civil).end.description(in: timezone),
-                      self.twilight(.nautical).start.description(in: timezone), self.twilight(.nautical).end.description(in: timezone),
-                      self.twilight(.astronomical).start.description(in: timezone), self.twilight(.astronomical).end.description(in: timezone),
+                      self.civilTwilight().start.description(in: timezone), self.civilTwilight().end.description(in: timezone),
+                      self.nauticalTwilight().start.description(in: timezone), self.nauticalTwilight().end.description(in: timezone),
+                      self.astronomicalTwilight().start.description(in: timezone), self.astronomicalTwilight().end.description(in: timezone),
                       "\(self.daytimeLength() / secondsPerHour) h",
-                      "\(self.twilightLength(.civil) / secondsPerHour) h",
-                      "\(self.twilightLength(.nautical) / secondsPerHour) h",
-                      "\(self.twilightLength(.astronomical) / secondsPerHour) h"
+                      "\(self.civilTwilightLength() / secondsPerHour) h",
+                      "\(self.nauticalTwilightLength() / secondsPerHour) h",
+                      "\(self.astronomicalTwilightLength() / secondsPerHour) h"
         )
     }
 }
