@@ -21,10 +21,11 @@ class TwilightTests: XCTestCase {
     
     func testOutput() {
         let now = Date()
-        cities.forEach { name, info in
+        cities.forEach { city in
+            let (name, infos) = city
             print("------City: \(name)------")
-            let twilight = Twilight(date: now, longtitude: info.longtitude, latitude: info.latitude)
-            print(twilight.description(in: TimeZone(identifier: info.timezone)!))
+            let twilight = Twilight(date: now, longtitude: infos.longtitude, latitude: infos.latitude)
+            print(twilight.description(in: TimeZone(identifier: infos.timezone)!))
         }
     }
 }

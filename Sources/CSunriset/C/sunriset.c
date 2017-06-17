@@ -130,11 +130,11 @@ int sunriset( int year, int month, int day, double lon, double lat,
         double cost;
         cost = ( sind(altit) - sind(lat) * sind(sdec) ) /
         ( cosd(lat) * cosd(sdec) );
-        if ( cost >= 1.0 )
-            rc = -1, t = 0.0;       /* Sun always below altit */
-        else if ( cost <= -1.0 )
-            rc = +1, t = 12.0;      /* Sun always above altit */
-        else
+        if ( cost >= 1.0 ) {
+            rc = -1; t = 0.0;       /* Sun always below altit */
+        } else if ( cost <= -1.0 ) {
+            rc = +1; t = 12.0;      /* Sun always above altit */
+        } else
             t = acosd(cost)/15.0;   /* The diurnal arc, hours */
     }
 
